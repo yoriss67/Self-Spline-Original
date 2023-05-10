@@ -1,0 +1,16 @@
+.spline {
+    position: relative;
+    width: 80vw;
+    height: 50vh;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.spline_text {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    color: #fff;
+    font-size: 3vw;
+}
