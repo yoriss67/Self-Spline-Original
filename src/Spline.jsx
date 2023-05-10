@@ -14,7 +14,7 @@ function Spline() {
   return (
     <div className='spline'>
       <canvas ref={canvasRef} />
-      <h5 className='spline_text'>わーい🥳</h5>
+      <h5 className='spline_text'>Yayyy🥳</h5>
      
     </div>
   );
