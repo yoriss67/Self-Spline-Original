@@ -1,26 +1,47 @@
-// import React, { useEffect, useRef } from 'react';
-// import { Application } from '@splinetool/runtime';
-// import './Spline.css';
+// 👩🏼‍🎓
+import React, { useEffect, useRef } from 'react';
+import { Application } from '@splinetool/runtime';
+import './Spline.css';
+import styled from 'styled-components';
 
-// function Spline() {
-//   const canvasRef = useRef(null);
+export default  function Spline() {
+  // const canvasRef = useRef(null);
 
-//   useEffect(() => {
-//     const canvas = canvasRef.current;
-//     const app = new Application(canvas);
-//     app.load('https://prod.spline.design/2Z1xfL0ICTXXmkfj/scene.splinecode');
-//   }, []);
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
+  //   const app = new Application(canvas);
+  //   app.load('https://prod.spline.design/2Z1xfL0ICTXXmkfj/scene.splinecode');
+  // }, []);
 
-//   return (
-//     <div className='spline'>
-//       <canvas ref={canvasRef} />
-//       <h5 className='spline_text'>Yayyy🥳</h5>
-     
-//     </div>
-//   );
-// }
+  return (
+    <Wrapper>
+      <Spline className="spline" scene="https://prod.spline.design/2Z1xfL0ICTXXmkfj/scene.splinecode" />
+      <Content></Content>     
+    </Wrapper>
+  );
+}
 
-// export default Spline;
+
+const Wrapper = styled.div`
+font-family: 'Spline Sans', sans-serif;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+`;
+
+const Content = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const SplineText = styled.h5`
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+`;
 
 
 
@@ -64,47 +85,47 @@
 
 
 
-//Bard
-import React, { useEffect, useRef } from 'react';
-import { Application } from '@splinetool/runtime';
-import './Spline.css';
-import styled from 'styled-components';
+// //Bard
+// import React, { useEffect, useRef } from 'react';
+// import { Application } from '@splinetool/runtime';
+// import './Spline.css';
+// import styled from 'styled-components';
 
-const MySpline = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-`;
+// const Wrapper = styled.div`
+//   width: 70%;
+//   margin: 0 auto;
+//   position: relative;
+// `;
 
-const Canvas = styled.canvas`
-  width: 100%;
-  height: 100%;
-`;
+// const Canvas = styled.canvas`
+//   width: 100%;
+//   height: 100%;
+// `;
 
-const SplineText = styled.h5`
-  font-size: 2em;
-  text-align: center;
-  color: #333;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-`;
+// const SplineText = styled.h5`
+//   font-size: 2em;
+//   text-align: center;
+//   color: #333;
+//   position: absolute;
+//   top: 0%;
+//   left: 0%;
+// `;
 
-function Spline() {
-  const canvasRef = useRef(null);
+// function Spline() {
+//   const canvasRef = useRef(null);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/2Z1xfL0ICTXXmkfj/scene.splinecode');
-  }, []);
+//   useEffect(() => {
+//     const canvas = canvasRef.current;
+//     const app = new Application(canvas);
+//     app.load('https://prod.spline.design/2Z1xfL0ICTXXmkfj/scene.splinecode');
+//   }, []);
 
-  return (
-    <MySpline>
-      <Canvas ref={canvasRef} />
-      <SplineText>Yayyy🥳</SplineText>
-    </MySpline>
-  );
-}
+//   return (
+//     <Wrapper>
+//       <Canvas ref={canvasRef} />
+//       <SplineText>Yayyy🥳</SplineText>
+//     </Wrapper>
+//   );
+// }
 
-export default Spline;
+// export default Spline;
